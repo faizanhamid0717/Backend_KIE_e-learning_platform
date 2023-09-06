@@ -30,6 +30,9 @@ app.use('/departments', Depart_router);
 app.use('/announcement',Announcementrouter)
 
 
+app.get("/", (req, res) => {
+    res.send("Welcome to the API");
+  });
 
 app.listen(process.env.PORT,async()=>{
       console.log(`server is running on port ${process.env.PORT}` )
